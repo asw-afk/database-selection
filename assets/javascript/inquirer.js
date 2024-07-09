@@ -24,25 +24,25 @@ const init = () => {
   interaction().then((answers) => {
     if (answers.menu === "View All Employees") {
       
-        return interaction();
+        return init();
     } else if (answers.menu === "Add Employee"){
 
-        return interaction();
+        return init();
     } else if (answers.menu === "Update Employee Role"){
 
-        return interaction();
+        return init();
     } else if (answers.menu === "View All Roles"){
 
-        return interaction();
+        return init();
     } else if (answers.menu === "Add Role") {
 
-        return interaction();
+        return init();
     } else if (answers.menu === "View All Departments") {
 
-        return interaction();
+        return init();
     } else if (answers.menu === "Add Departments") {
 
-        return interaction();
+        return init();
     }
   });
 };
