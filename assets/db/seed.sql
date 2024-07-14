@@ -18,8 +18,8 @@ VALUES
 ('Legal Team Lead', 250000, 4),
 ('Lawyer', 3, 4);
 
-DELETE FROM employees;
-INSERT INTO employee (first_name, last_name, role_id, manager_id)\
+DELETE FROM employee;
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 ('Bethany', 'Esda', 1, null),
 ('Mckenzie', 'Fakename', 2, null),
