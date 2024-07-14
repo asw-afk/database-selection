@@ -1,26 +1,34 @@
-DROP DATABASE IF EXISTS business_db_db;
+\c postgres;
+DROP DATABASE IF EXISTS business_db;
 CREATE DATABASE business_db;
 
 \c business_db;
 
-CREATE TABLE employees(
+CREATE TABLE employee(
     id SERIAL PRIMARY KEY,
-    employee_name VARCHAR(30) NOT NULL,
-    title INTEGER,
-    departments,
-    salary NUMBER, 
-    manager  
-    FOREIGN KEY (title_name) REFERENCES roles(title_name)
-
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    role_id INTEGER NOT NULL,
+    manager_id INTEGER,
+    FOREIGN KEY (role_id)
+    REFERENCES role(id)
+    ON DELETE SET NULL
 );
 
 
-CREATE TABLE departments(
-    
-)
+CREATE TABLE department(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(30) UNIQUE NOT NULL
+);
 
-CREATE TABLE roles (
-title_id INTEGER,
-title_name VARCHAR(30) 
+CREATE TABLE role (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(30) UNIQUE NOT NULL, 
+    salary DECIMAL NOT NULL,
+    department INTEGER NOT NULL,
+    FOREIGN KEY (department)
+    REFERENCES department(id)
+    ON DELETE SET NULL
+);
 
-)
+\i seed.sql;

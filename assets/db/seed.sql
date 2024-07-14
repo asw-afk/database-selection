@@ -1,15 +1,29 @@
-    INSERT INTO employees (employee_id, employee_name)
-    VALUES 
-    (1, 'Bethany Esda'),
-    (2, 'Jim Bean');
+DELETE FROM DEPARTMENT; 
+INSERT INTO department (name)
+VALUES
+('Sale'),
+('Engineering'),
+('Finance'),
+('Legal');
 
-    INSERT INTO departments (department_id, department_name)
-    VALUES 
-    (101, 'Sales'),
-    (102, 'Engineering'),
-    (103, 'Finance'),
-    (104, 'Legal');
+DELETE FROM role;
+INSERT INTO role (title, salary, department)
+VALUES
+('Sales Lead', 10, 1),
+('Sales Person', 15, 1),
+('Lead Engineer', 100000, 2),
+('Software Engineer',50000, 2),
+('Account Manager', 12000000, 3),
+('Accountant', 77000, 3),
+('Legal Team Lead', 250000, 4),
+('Lawyer', 3, 4);
 
-    INSERT INTO roles () 
-    VALUES 
-        (1)
+DELETE FROM employees;
+INSERT INTO employee (first_name, last_name, role_id, manager_id)\
+VALUES
+('Bethany', 'Esda', 1, null),
+('Mckenzie', 'Fakename', 2, null),
+('Nos', 'Feratu', 3, 3),
+('Hugh', 'Mann', 4, 1),
+('Guy', 'Dudesmann', 1, null),
+('Not', 'Araccoon', 2, null);
