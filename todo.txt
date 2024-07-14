@@ -1,0 +1,8 @@
+To do:
+
+Add functions for every interaction.
+Re; Adding an employee, department, or role.
+    Or deleting the aforementioned items.
+
+
+

@@ -1,5 +1,15 @@
 const inquirer = require("inquirer");
-//const require = fs('fs');
+const { Pool } = require('pg');
+
+const pool = new Pool(
+  {
+    user: "postgres",
+    password: "ZBR223J",
+    host: "localhost",
+    database: "business_db"
+  },
+  console.log(`Connected to BusinessName database`)
+);
 
 const interaction = () => {
   return inquirer.prompt([
