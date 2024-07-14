@@ -26,4 +26,4 @@ VALUES
 ('Nos', 'Feratu', 3, 3),
 ('Hugh', 'Mann', 4, 1),
 ('Guy', 'Dudesmann', 1, null),
-('Not', 'Araccoon', 2, null);
+('Not', 'Araccoon', 2, 1);

@@ -1,10 +1,11 @@
 const inquirer = require("inquirer");
 const { Pool } = require('pg');
+const { viewAllEmployees, addDepartment} = require('./addNdelete');
 
 const pool = new Pool(
   {
     user: "postgres",
-    password: "ZBR223J",
+    password: "hey",
     host: "localhost",
     database: "business_db"
   },
@@ -33,8 +34,8 @@ const interaction = () => {
 const init = () => {
   interaction().then((answers) => {
     if (answers.menu === "View All Employees") {
-      
-        return init();
+        viewAllEmployees();
+        init();
     } else if (answers.menu === "Add Employee"){
 
         return init();
@@ -51,8 +52,8 @@ const init = () => {
 
         return init();
     } else if (answers.menu === "Add Departments") {
-
-        return init();
+      addDepartment();
+      init();
     }
   });
 };
